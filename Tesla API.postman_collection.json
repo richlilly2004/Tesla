@@ -1,0 +1,1244 @@
+{
+	"info": {
+		"_postman_id": "a78ec850-f318-4db1-a36a-e149e151bb71",
+		"name": "Tesla API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List",
+			"item": [
+				{
+					"name": "Get Vehicles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{appOnlyAccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://owner-api.teslamotors.com/api/1/vehicles",
+							"protocol": "https",
+							"host": [
+								"owner-api",
+								"teslamotors",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"vehicles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Specific Vehicle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{appOnlyAccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://owner-api.teslamotors.com/api/1/vehicles/{{ID}}",
+							"protocol": "https",
+							"host": [
+								"owner-api",
+								"teslamotors",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"vehicles",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "State & Settings",
+			"item": [
+				{
+					"name": "Get Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{appOnlyAccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://owner-api.teslamotors.com/api/1/vehicles/{{ID}}/vehicle_data",
+							"protocol": "https",
+							"host": [
+								"owner-api",
+								"teslamotors",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"vehicles",
+								"{{ID}}",
+								"vehicle_data"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Vehicle Service Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{appOnlyAccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://owner-api.teslamotors.com/api/1/vehicles/{{ID}}/service_data",
+							"protocol": "https",
+							"host": [
+								"owner-api",
+								"teslamotors",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"vehicles",
+								"{{ID}}",
+								"service_data"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Mobile Enabled",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{appOnlyAccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://owner-api.teslamotors.com/api/1/vehicles/{{ID}}/mobile_enabled",
+							"protocol": "https",
+							"host": [
+								"owner-api",
+								"teslamotors",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"vehicles",
+								"{{ID}}",
+								"mobile_enabled"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Charge State",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{appOnlyAccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://owner-api.teslamotors.com/api/1/vehicles/{{ID}}/data_request/charge_state",
+							"protocol": "https",
+							"host": [
+								"owner-api",
+								"teslamotors",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"vehicles",
+								"{{ID}}",
+								"data_request",
+								"charge_state"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cliimate State",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{appOnlyAccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://owner-api.teslamotors.com/api/1/vehicles/{{ID}}/data_request/climate_state",
+							"protocol": "https",
+							"host": [
+								"owner-api",
+								"teslamotors",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"vehicles",
+								"{{ID}}",
+								"data_request",
+								"climate_state"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Drive State",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{appOnlyAccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://owner-api.teslamotors.com/api/1/vehicles/{{ID}}/data_request/drive_state",
+							"protocol": "https",
+							"host": [
+								"owner-api",
+								"teslamotors",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"vehicles",
+								"{{ID}}",
+								"data_request",
+								"drive_state"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get UI Settings",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{appOnlyAccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://owner-api.teslamotors.com/api/1/vehicles/{{ID}}/data_request/gui_settings",
+							"protocol": "https",
+							"host": [
+								"owner-api",
+								"teslamotors",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"vehicles",
+								"{{ID}}",
+								"data_request",
+								"gui_settings"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Commands",
+			"item": [
+				{
+					"name": "Unlock Doors",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{appOnlyAccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://owner-api.teslamotors.com/api/1/vehicles/{{ID}}/command/door_unlock",
+							"protocol": "https",
+							"host": [
+								"owner-api",
+								"teslamotors",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"vehicles",
+								"{{ID}}",
+								"command",
+								"door_unlock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lock Doors",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{appOnlyAccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://owner-api.teslamotors.com/api/1/vehicles/{{ID}}/command/door_lock",
+							"protocol": "https",
+							"host": [
+								"owner-api",
+								"teslamotors",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"vehicles",
+								"{{ID}}",
+								"command",
+								"door_lock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Honk Horn",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{appOnlyAccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://owner-api.teslamotors.com/api/1/vehicles/{{ID}}/command/honk_horn",
+							"protocol": "https",
+							"host": [
+								"owner-api",
+								"teslamotors",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"vehicles",
+								"{{ID}}",
+								"command",
+								"honk_horn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Flash Lights",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{appOnlyAccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://owner-api.teslamotors.com/api/1/vehicles/{{ID}}/command/flash_lights",
+							"protocol": "https",
+							"host": [
+								"owner-api",
+								"teslamotors",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"vehicles",
+								"{{ID}}",
+								"command",
+								"flash_lights"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Start HVAC System",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{appOnlyAccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://owner-api.teslamotors.com/api/1/vehicles/{{ID}}/command/auto_conditioning_start",
+							"protocol": "https",
+							"host": [
+								"owner-api",
+								"teslamotors",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"vehicles",
+								"{{ID}}",
+								"command",
+								"auto_conditioning_start"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stop HVAC System",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{appOnlyAccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://owner-api.teslamotors.com/api/1/vehicles/{{ID}}/command/auto_conditioning_stop",
+							"protocol": "https",
+							"host": [
+								"owner-api",
+								"teslamotors",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"vehicles",
+								"{{ID}}",
+								"command",
+								"auto_conditioning_stop"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Temperature",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{appOnlyAccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://owner-api.teslamotors.com/api/1/vehicles/{{ID}}/command/set_temps?driver_temp=:driver_temp&passenger_temp=:passenger_temp",
+							"protocol": "https",
+							"host": [
+								"owner-api",
+								"teslamotors",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"vehicles",
+								"{{ID}}",
+								"command",
+								"set_temps"
+							],
+							"query": [
+								{
+									"key": "driver_temp",
+									"value": ":driver_temp"
+								},
+								{
+									"key": "passenger_temp",
+									"value": ":passenger_temp"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Charge Limit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{appOnlyAccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://owner-api.teslamotors.com/api/1/vehicles/{{ID}}/command/set_charge_limit?percent=:limit_value",
+							"protocol": "https",
+							"host": [
+								"owner-api",
+								"teslamotors",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"vehicles",
+								"{{ID}}",
+								"command",
+								"set_charge_limit"
+							],
+							"query": [
+								{
+									"key": "percent",
+									"value": ":limit_value"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Max Range Charge Limit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{appOnlyAccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://owner-api.teslamotors.com/api/1/vehicles/{{ID}}/command/charge_max_range",
+							"protocol": "https",
+							"host": [
+								"owner-api",
+								"teslamotors",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"vehicles",
+								"{{ID}}",
+								"command",
+								"charge_max_range"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Standard Charge Limit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{appOnlyAccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://owner-api.teslamotors.com/api/1/vehicles/{{ID}}/command/charge_standard",
+							"protocol": "https",
+							"host": [
+								"owner-api",
+								"teslamotors",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"vehicles",
+								"{{ID}}",
+								"command",
+								"charge_standard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remote Start Drive",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{appOnlyAccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://owner-api.teslamotors.com/api/1/vehicles/{{ID}}/command/remote_start_drive?password={{password}}",
+							"protocol": "https",
+							"host": [
+								"owner-api",
+								"teslamotors",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"vehicles",
+								"{{ID}}",
+								"command",
+								"remote_start_drive"
+							],
+							"query": [
+								{
+									"key": "password",
+									"value": "{{password}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Open Charge Port",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{appOnlyAccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://owner-api.teslamotors.com/api/1/vehicles/{{ID}}/command/charge_port_door_open",
+							"protocol": "https",
+							"host": [
+								"owner-api",
+								"teslamotors",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"vehicles",
+								"{{ID}}",
+								"command",
+								"charge_port_door_open"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Close Charge Port",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{appOnlyAccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://owner-api.teslamotors.com/api/1/vehicles/{{ID}}/command/charge_port_door_close",
+							"protocol": "https",
+							"host": [
+								"owner-api",
+								"teslamotors",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"vehicles",
+								"{{ID}}",
+								"command",
+								"charge_port_door_close"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Start Charging",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{appOnlyAccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://owner-api.teslamotors.com/api/1/vehicles/{{ID}}/command/charge_start",
+							"protocol": "https",
+							"host": [
+								"owner-api",
+								"teslamotors",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"vehicles",
+								"{{ID}}",
+								"command",
+								"charge_start"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stop Charging",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{appOnlyAccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://owner-api.teslamotors.com/api/1/vehicles/{{ID}}/command/charge_stop",
+							"protocol": "https",
+							"host": [
+								"owner-api",
+								"teslamotors",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"vehicles",
+								"{{ID}}",
+								"command",
+								"charge_stop"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upcoming Calendar Entries",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{appOnlyAccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://owner-api.teslamotors.com/api/1/vehicles/{{ID}}/command/upcoming_calendar_entries",
+							"protocol": "https",
+							"host": [
+								"owner-api",
+								"teslamotors",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"vehicles",
+								"{{ID}}",
+								"command",
+								"upcoming_calendar_entries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Valet Mode",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{appOnlyAccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://owner-api.teslamotors.com/api/1/vehicles/{{ID}}/command/set_valet_mode?on=:on&password={{password}}",
+							"protocol": "https",
+							"host": [
+								"owner-api",
+								"teslamotors",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"vehicles",
+								"{{ID}}",
+								"command",
+								"set_valet_mode"
+							],
+							"query": [
+								{
+									"key": "on",
+									"value": ":on"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset valet PIN",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{appOnlyAccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://owner-api.teslamotors.com/api/1/vehicles/{{ID}}/command/reset_valet_pin",
+							"protocol": "https",
+							"host": [
+								"owner-api",
+								"teslamotors",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"vehicles",
+								"{{ID}}",
+								"command",
+								"reset_valet_pin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Speed Limit Activate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{appOnlyAccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://owner-api.teslamotors.com/api/1/vehicles/{{ID}}/command/speed_limit_activate",
+							"protocol": "https",
+							"host": [
+								"owner-api",
+								"teslamotors",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"vehicles",
+								"{{ID}}",
+								"command",
+								"speed_limit_activate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Speed Limit Deactivate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{appOnlyAccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://owner-api.teslamotors.com/api/1/vehicles/{{ID}}/command/speed_limit_deactivate",
+							"protocol": "https",
+							"host": [
+								"owner-api",
+								"teslamotors",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"vehicles",
+								"{{ID}}",
+								"command",
+								"speed_limit_deactivate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Speed Limit Set Limit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{appOnlyAccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://owner-api.teslamotors.com/api/1/vehicles/{{ID}}/command/speed_limit_set_limit",
+							"protocol": "https",
+							"host": [
+								"owner-api",
+								"teslamotors",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"vehicles",
+								"{{ID}}",
+								"command",
+								"speed_limit_set_limit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Speed Limit Clear PIN",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{appOnlyAccessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://owner-api.teslamotors.com/api/1/vehicles/{{ID}}/command/speed_limit_clear_pin",
+							"protocol": "https",
+							"host": [
+								"owner-api",
+								"teslamotors",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"vehicles",
+								"{{ID}}",
+								"command",
+								"speed_limit_clear_pin"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Bearer Token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f3e0059e-45d4-400e-a264-fbdd683cd904",
+						"exec": [
+							"let response = JSON.parse(responseBody);\r",
+							"\r",
+							"pm.environment.set(\"appOnlyAccessToken\", response.access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "{{grant_type}}",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "{{client_id}}",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "{{client_secret}}",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "{{email}}",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://owner-api.teslamotors.com/oauth/token",
+					"protocol": "https",
+					"host": [
+						"owner-api",
+						"teslamotors",
+						"com"
+					],
+					"path": [
+						"oauth",
+						"token"
+					]
+				},
+				"description": "Generated from a curl request: \ncurl -X POST -H \\\"Cache-Control: no-cache\\\" -H \\\"Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW\\\" -F \\\"grant_type=password\\\" -F \\\"client_id=81527cff06843c8634fdc09e8ac0abefb46ac849f38fe1e431c2ef2106796384\\\" -F \\\"client_secret=c7257eb71a564034f9419ee651c7d0e5f7aa6bfbd18bafb5c5c033b093bb2fa3\\\" -F \\\"email=<USERNAME>\\\" -F \\\"password=<PASSWORD>\\\" \\\"https://owner-api.teslamotors.com/oauth/token\\\""
+			},
+			"response": []
+		},
+		{
+			"name": "Wake Up",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{appOnlyAccessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://owner-api.teslamotors.com/api/1/vehicles/{{ID}}/wake_up",
+					"protocol": "https",
+					"host": [
+						"owner-api",
+						"teslamotors",
+						"com"
+					],
+					"path": [
+						"api",
+						"1",
+						"vehicles",
+						"{{ID}}",
+						"wake_up"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
